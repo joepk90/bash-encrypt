@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # import utils
-. ./bash/utils.sh
+. ./$PROJECT_NAME/utils.sh
 
 # export environment variable
 export_secret_var

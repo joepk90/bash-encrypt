@@ -8,4 +8,4 @@
 . ./.env 
 
 # check all staged files have been encrypted
-./bash/check-staged.sh
+./bash-encrypt/check-staged.sh

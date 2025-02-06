@@ -4,14 +4,13 @@
 # - might need to use this logic to configure either git hooks
 
 # TO DO:
-# instead of this, create a new file called ./bash/hooks/pre-commit.d.sh",
+# instead of this, create a new file called ./bash-encrypt/hooks/pre-commit.d.sh",
 # which imports the ./bash/hooks/pre-commit.sh file, then
 # just check that the import statement exists for the ./bash/hooks/pre-commit.d.sh,
 # in the existing pre-commit file. THIS SHOULD BE MUCH SIMPLER!
 
-
+BASH_PRECOMMIT_FILE="./$PROJECT_NAME/hooks/pre-commit.sh"
 GIT_PRECOMMIT_FILE=".git/hooks/pre-commit"
-BASH_PRECOMMIT_FILE="./bash/hooks/pre-commit.sh"
 
 make_script_executable() {
 	chmod +x "$1"
