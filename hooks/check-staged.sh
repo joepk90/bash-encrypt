@@ -1,7 +1,9 @@
 #!/bin/bash
 
+include .env
+
 # import utils
-. ./$PROJECT_NAME/utils.sh
+. ./${HOOKS_DIR_PATH}/utils.sh
 
 # export environment variable
 export_secret_var
