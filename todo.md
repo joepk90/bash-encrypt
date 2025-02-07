@@ -1,5 +1,5 @@
 # To Do:
-- [ ] fix git hooks import paths (hardcode path of utils directory when copying hook to .git directory...)
+- [x] fix git hooks import paths (hardcode path of utils directory when copying hook to .git directory...)
 - [x] improve git configuration - make a new file, or append to an existing file
   - [ ] use directory and instead just check if the import is in the main hook file
         git hook file? https://stackoverflow.com/questions/26624368/handle-multiple-pre-commit-hooks
