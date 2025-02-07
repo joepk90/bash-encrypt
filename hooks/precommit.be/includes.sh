@@ -7,3 +7,4 @@ BASH_ENCRYPT=$1
 HOOKS_DIR_PATH="./$HOOKS_DIR_PATH/precommit.be/"
 
 . "$HOOKS_DIR_PATH/precommit.sh" $BASH_ENCRYPT
+# more precommit hooks can be imported here...
