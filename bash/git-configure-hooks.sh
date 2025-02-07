@@ -9,12 +9,6 @@ GIT_PRECOMMIT_FILE=".git/hooks/pre-commit"
 
 PRECOMMIT_HOOK_IMPORT_STRING="./$HOOKS_DIR_PATH/precommit.be/includes.sh $PROJECT_NAME"
 
-# remove spaces and new lines from text
-compress_text() {
-	TEXT=$1
-	echo "$TEXT" | tr -d '[:space:]'
-}
-
 get_git_script_text() {
 	cat $GIT_PRECOMMIT_FILE
 }

@@ -21,7 +21,7 @@ bash-scripts-configure:
 # configure gits precommit hook
 # it must be renamed to pre-commit in order for git to use it.
 git-configure-hooks:
-	@. ./${BASH_DIR_PATH}/git-configure-hooks-update.sh
+	@. ./${BASH_DIR_PATH}/git-configure-hooks.sh
 
 # encrypt a single secret filee - example usage:
 # make secret-encrypt file="src/test/text.secret"
