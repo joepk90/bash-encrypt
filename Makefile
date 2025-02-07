@@ -1,15 +1,5 @@
 include ./bash-encrypt/vars.sh
 
-# export PROJECT_NAME=bash-encrypt
-# export BASH_DIR_PATH=${PROJECT_NAME}/bash
-# export HOOKS_DIR_PATH=${PROJECT_NAME}/hooks
-# alternatively this import path means the .env file will always be imported from this path
-# include $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/.env
-	
-# make bash scripts executable
-# bash-scripts-configure:
-# 	make env-vars && chmod +x ./${PROJECT_NAME}/*
-
 # configure gits precommit hook
 # it must be renamed to pre-commit in order for git to use it.
 # make bash scripts executable
