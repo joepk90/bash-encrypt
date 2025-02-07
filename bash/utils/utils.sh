@@ -9,7 +9,9 @@ get_secret_ext() {
 }
 
 export_secret_var() {
-    export BASH_ENCRYPT_SECRETS_EXT=${SECRETS_EXT} && . ./.env
+    echo "test!"
+    echo $BASH_ENCRYPT_SECRETS_EXT
+    export BASH_ENCRYPT_SECRETS_EXT=${BASH_ENCRYPT_SECRETS_EXT} && . ./.env
 }
 
 decrypt_file_text() {

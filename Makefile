@@ -12,7 +12,7 @@ export HOOKS_DIR_PATH=${PROJECT_NAME}/hooks
 # it must be renamed to pre-commit in order for git to use it.
 # make bash scripts executable
 bash-scripts-configure:
-	chmod +x ./${BASH_DIR_PATH}/*
+	chmod +x ./${BASH_DIR_PATH}/*/**
 
 # configure gits precommit hook
 # it must be renamed to pre-commit in order for git to use it.
