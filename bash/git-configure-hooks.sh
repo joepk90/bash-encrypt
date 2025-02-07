@@ -4,7 +4,6 @@
 . "$PROJECT_NAME/vars.sh"
 . ./$BASH_UTILS_PATH/index.sh
 
-BASH_PRECOMMIT_FILE="./$PROJECT_NAME/hooks/pre-commit.sh"
 GIT_PRECOMMIT_FILE=".git/hooks/pre-commit"
 
 PRECOMMIT_HOOK_IMPORT_STRING="./$HOOKS_DIR_PATH/precommit/includes.sh $PROJECT_NAME"
