@@ -34,8 +34,8 @@ make git-configure-hooks
 
 Create an .env file in the root directory with the following text:
 ```
-export ENCRYPTION_SEED="12345"
-export SECRETS_EXT="secret"
+export BASH_ENCRYPT_SEED="12345"
+export BASH_ENCRYPT_SECRETS_EXT="secret"
 ```
 
 

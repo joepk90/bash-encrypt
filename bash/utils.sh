@@ -1,17 +1,27 @@
-#!/bin/bash
+#!/bin/basht"
+
+get_encrypt_seed() {
+     echo "$BASH_ENCRYPT_SEED"
+}
+
+get_secret_ext() {
+    echo "$BASH_ENCRYPT_SECRETS_EXT"
+}
 
 export_secret_var() {
-    export SECRETS_EXT=${SECRETS_EXT} && . ./.env
+    export BASH_ENCRYPT_SECRETS_EXT=${SECRETS_EXT} && . ./.env
 }
 
 decrypt_file_text() {
     FILE=$1
-    openssl aes-256-cbc -d -a -nosalt -pbkdf2 -pass pass:$ENCRYPTION_SEED -in "$FILE"
+    SEED=$(get_encrypt_seed)
+    openssl aes-256-cbc -d -a -nosalt -pbkdf2 -pass pass:$SEED -in "$FILE"
 }
 
 encrypt_file_text() {
     FILE=$1
-    openssl aes-256-cbc -a -nosalt -pbkdf2 -pass pass:$ENCRYPTION_SEED -in "$FILE"
+    SEED=$(get_encrypt_seed)
+    openssl aes-256-cbc -a -nosalt -pbkdf2 -pass pass:$SEED -in "$FILE"
 }
 
 encrypt_file() {
@@ -43,8 +53,10 @@ is_file_encrypted() {
 }
 
 is_seed_populated() {
+    SEED=$(get_encrypt_seed)
+
     # check encryption seed has been populated
-    if [ "$ENCRYPTION_SEED" != "" ]; then
+    if [ "$SEED" != "" ]; then
        return
     fi
 
@@ -54,11 +66,12 @@ is_seed_populated() {
 }
 
 file_has_valid_extension() {
-    if [[ "$file" == *.$SECRETS_EXT ]]; then
+    EXTENSION=$(get_secret_ext)
+    if [[ "$file" == *.$EXTENSION ]]; then
         return
     fi
 
-    echo "Error: The input file must have a .$SECRETS_EXT extension."
+    echo "Error: The input file must have a .$EXTENSION extension."
     exit 1
 }
 
@@ -89,14 +102,16 @@ if_decrypted_abort() {
 }
 
 get_all_secrets() {
-    find ./ -type f -path "*.$SECRETS_EXT"
+    EXTENSION=$(get_secret_ext)
+    find ./ -type f -path "*.$EXTENSION"
 }
 
 file_is_secret() {
     FILE=$1
+    EXTENSION=$(get_secret_ext)
 
      # if file path does not include the secrets extension, continue to the next item
-    if [[ "$FILE" != *"$SECRETS_EXT"* ]]; then
+    if [[ "$FILE" != *"$EXTENSION"* ]]; then
         echo "false"
     else
         echo "true"
