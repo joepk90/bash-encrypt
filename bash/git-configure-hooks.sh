@@ -5,8 +5,7 @@
 . ./$BASH_UTILS_PATH/index.sh
 
 GIT_PRECOMMIT_FILE=".git/hooks/pre-commit"
-
-PRECOMMIT_HOOK_IMPORT_STRING="./$HOOKS_DIR_PATH/precommit/includes.sh $PROJECT_NAME"
+PRECOMMIT_HOOK_IMPORT_STRING="./$PRECOMMIT_HOOK_DIR_PATH/includes.sh $PROJECT_NAME"
 
 get_git_script_text() {
 	cat $GIT_PRECOMMIT_FILE
