@@ -9,7 +9,6 @@ get_secret_ext() {
 }
 
 export_secret_var() {
-    echo "test!"
     echo $BASH_ENCRYPT_SECRETS_EXT
     export BASH_ENCRYPT_SECRETS_EXT=${BASH_ENCRYPT_SECRETS_EXT} && . ./.env
 }
