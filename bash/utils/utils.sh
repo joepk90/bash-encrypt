@@ -111,7 +111,7 @@ file_is_secret() {
     EXTENSION=$(get_secret_ext)
 
      # if file path does not include the secrets extension, continue to the next item
-    if [[ "$FILE" != *"$EXTENSION"* ]]; then
+    if [[ "$FILE" != *"$EXTENSION" ]]; then
         echo "false"
     else
         echo "true"
