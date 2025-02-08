@@ -2,7 +2,7 @@
 
 # import vars and import util functions
 . "$PROJECT_NAME/vars.sh"
-. ./$BASH_UTILS_PATH/index.sh
+. $BASH_UTILS_PATH/index.sh
 
 GIT_PRECOMMIT_FILE=".git/hooks/pre-commit"
 PRECOMMIT_HOOK_IMPORT_STRING="./$PRECOMMIT_HOOK_DIR_PATH/includes.sh $PROJECT_NAME"

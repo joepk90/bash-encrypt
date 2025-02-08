@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # import utils
-. ./$BASH_UTILS_PATH/index.sh
+. $BASH_UTILS_PATH/index.sh
 
 # export environment variable
 export_secret_var
