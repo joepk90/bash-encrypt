@@ -1,3 +1,4 @@
+export PARENT_DIRECTORY=${BASH_ENCRYPT_ROOT_DIR}/..
 export PROJECT_NAME=bash-encrypt
 export BASH_DIR_PATH=${BASH_ENCRYPT_ROOT_DIR}/bash
 export BASH_UTILS_PATH=${BASH_DIR_PATH}/utils
