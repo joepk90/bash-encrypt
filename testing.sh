@@ -1,0 +1,12 @@
+echo "BASH_ENCRYPT_DIR_NAME: $BASH_ENCRYPT_DIR_NAME"
+echo "BASH_DIR_PATH: $BASH_DIR_PATH"
+echo "BASH_UTILS_PATH: $BASH_UTILS_PATH"
+echo "HOOKS_DIR_PATH: $HOOKS_DIR_PATH"
+echo "PRECOMMIT_HOOK_DIR_PATH: $PRECOMMIT_HOOK_DIR_PATH"
+echo "========================"
+echo "========================"
+echo "========================"
+echo EXTRAS:
+echo "PARENT_DIRECTORY_TEST (empty): $PARENT_DIRECTORY_TEST"
+echo "PARENT_DIRECTORY GIT: $(git rev-parse --show-toplevel)"
+echo "GIT TOP LEVEL $(git rev-parse --show-toplevel)"

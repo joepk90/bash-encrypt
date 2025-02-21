@@ -9,7 +9,7 @@ get_secret_ext() {
 }
 
 export_secret_var() {
-    . ${PARENT_DIRECTORY}/.env
+    . ${PROJECT_ROOT_PATH}/.env
 }
 
 decrypt_file_text() {
@@ -103,7 +103,7 @@ if_decrypted_abort() {
 
 get_all_secrets() {
     EXTENSION=$(get_secret_ext)
-    find $PARENT_DIRECTORY -type f -name "*.$EXTENSION"
+    find $PROJECT_ROOT_PATH -type f -name "*.$EXTENSION"
 }
 
 file_is_secret() {

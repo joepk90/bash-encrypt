@@ -1,6 +1,5 @@
 #!/bin/basht"
 
-
 get directory path from where this script has been run from
 get_relative_directory_path() {
     echo $(dirname "$0")
