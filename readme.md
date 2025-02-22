@@ -19,7 +19,7 @@ git submodule add git@github.com:joepk90/bash-encrypt.git
 
 imported the Makefile commmands by including the following line at the top of your projects root Makefile:
 ```
-include ./bash-encrypt/Makefile
+include ./bash-encrypt/BashEncryptMf.mk
 ```
 
 Make the bash scripts executable:
