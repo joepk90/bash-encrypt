@@ -8,9 +8,6 @@ export PROJECT_ROOT_PATH=$(git rev-parse --show-toplevel)
 
 # script starts here
 
-# import utils
-. $BASH_ENCRYPT_BASH_DIR_PATH/utils.sh
-
 # export environment variable
 export_secret_var
 
