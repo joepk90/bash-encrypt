@@ -10,5 +10,5 @@ PROJECT_ROOT_PATH=$(git rev-parse --show-toplevel)
 
 # script starts here
 
-. "$PRECOMMIT_HOOK_DIR_PATH/precommit.sh" $BASH_ENCRYPT_DIR_NAME
+. "$BASH_ENCRYPT_PRECOMMIT_HOOK_DIR_PATH/precommit.sh" $BASH_ENCRYPT_DIR_NAME
 # more precommit hooks can be imported here...
