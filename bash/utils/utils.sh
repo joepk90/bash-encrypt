@@ -9,7 +9,7 @@ get_secret_ext() {
 }
 
 export_secret_var() {
-    export BASH_ENCRYPT_SECRETS_EXT=${BASH_ENCRYPT_SECRETS_EXT} && . ./.env
+    . ${PROJECT_ROOT_PATH}/.env
 }
 
 decrypt_file_text() {
@@ -103,7 +103,7 @@ if_decrypted_abort() {
 
 get_all_secrets() {
     EXTENSION=$(get_secret_ext)
-    find ./ -type f -path "*.$EXTENSION"
+    find $PROJECT_ROOT_PATH -type f -name "*.$EXTENSION"
 }
 
 file_is_secret() {

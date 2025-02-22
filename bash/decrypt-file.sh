@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# import utils
-. ./$BASH_DIR_PATH/utils/index.sh
+# required in every file
+export PROJECT_ROOT_PATH=$(git rev-parse --show-toplevel)
+. $PROJECT_ROOT_PATH/$BASH_ENCRYPT_DIR_NAME/vars.sh
+. $PROJECT_ROOT_PATH/$BASH_ENCRYPT_DIR_NAME/utils.sh
+
+
+# script starts here
 
 # export environment variable
 export_secret_var
